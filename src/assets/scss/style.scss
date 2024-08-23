@@ -1,0 +1,272 @@
+@mixin media($value) {
+    @if ($value < 0) {
+        @media screen and (min-width: calc($value * (-1)) + 'px') {
+            @content;
+        }
+
+    } @else {
+        @media screen and (max-width: $value + 'px') {
+            @content;
+        }
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'ITC Avant Garde Gothic Std Demi';
+    src: url('../fonts/ITC\ Avant\ Garde\ Gothic\ Std\ Demi/ITC Avant Garde Gothic Std Demi.otf');
+}
+
+@font-face {
+    font-family: 'ITC Avant Garde Gothic';
+    src: url('../fonts/itc-avant-garde-gothic/ITCAvantGardeStd-MdCn.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'ITC Svant Garde Gothic Demi';
+    src: url('../fonts/ITC\ Avant\ Garde\ Gothic\ Demi/avantgarde_demi.ttf');
+    font-weight: 400;
+}
+
+$font-itc-gothic: 'ITC Avant Garde Gothic', sans-serif;
+$font-itc-gothic-demi: 'ITC Svant Garde Gothic Demi', sans-serif;
+$font-itc-gothic-std-demi: 'ITC Avant Garde Gothic Std Demi', sans-serif;
+$font-inter: "Inter", sans-serif;
+$font-montserrat: "Montserrat", sans-serif;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+span, label {
+    display: inline-block;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+input, textarea {
+    outline: none;
+    border: 0;
+    background: transparent;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    outline: 0;
+}
+
+address {
+    font-style: normal;
+}
+
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+ul, ol, dl {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-weight: 400;
+    color: #000;
+    font-family: $font-itc-gothic;
+}
+
+.main_container {
+    max-width: 1240px;
+    margin: 0 auto;
+
+    @include media(1280) {
+        max-width: calc(100% - 40px);
+    }
+}
+
+.btn {
+    &_orange {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 20px;
+        border-radius: 5px;
+        background: #EF6C1E;
+        color: #fff;
+        font-family: $font-itc-gothic-std-demi;
+        font-size: 14px;
+        font-weight: 600;
+        transition: .2s ease all;
+
+        &:hover {
+            background: #c05f27;
+        }
+    }
+
+    &_yellow {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 43px;
+        padding: 10px 30px;
+        background: #FFD261;
+        border-radius: 15px;
+        font-family: $font-itc-gothic-std-demi;
+        font-size: 16px;
+        color: #000;
+    }
+}
+
+// Header
+.header {
+    background: #181818;
+    color: #fff;
+    padding: 28px 0 31px;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 53px;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        &_text {
+            font-size: 22.33px;
+            font-family: $font-montserrat;
+            font-weight: 800;
+            letter-spacing: 0.4px;
+
+            span {
+                color: #EF6C1E;
+            }
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        gap: 19px;
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+
+        
+    }
+
+    &__auth {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    &__settings {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+    }
+}
+// Header end
+
+// Home
+.home {
+    padding: 113px 0 99px;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 123px;
+    }
+
+    &__left {
+        width: 399px;
+        flex-shrink: 0;
+        text-align: center;
+
+        h2 {
+            font-family: $font-montserrat;
+            font-size: 41.99px;
+            font-weight: 800;
+            letter-spacing: 0.4px;
+            color: #1E1E1E;
+            line-height: 60px;
+            margin: 28px 0 4px;
+
+            span {
+                color: #EF6C1E;
+            }
+        }
+
+        p {
+            font-family: $font-montserrat;
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 0.4px;
+            color: #1E1E1E;
+        }
+    }
+
+    &__right {
+        h3 {
+            font-size: 40px;
+            font-family: $font-itc-gothic-demi;
+            font-weight: 400;
+            color: #000000;
+            margin-bottom: 20px;
+
+            span {
+                color: #EF6C1E;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 500;
+            color: #000000;
+            margin-bottom: 20px;
+            max-width: 614px;
+        }
+    }
+}
+// Home end
