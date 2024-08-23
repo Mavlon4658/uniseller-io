@@ -190,7 +190,7 @@ body {
         align-items: center;
         gap: 25px;
 
-        
+
     }
 
     &__auth {
@@ -270,3 +270,72 @@ body {
     }
 }
 // Home end
+
+// footer
+.footer {
+    border: 1px solid red;
+
+    &_logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &_social {
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+
+        ul {
+
+            h6 {
+                font-family: $font-itc-gothic-demi;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 21.4px;
+                color: #000;
+                margin-bottom: 23px;
+            }
+
+            a {
+                font-family: $font-itc-gothic;
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 18.58px;
+                color: #000;
+
+            }
+        }
+
+        .social_media {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            a {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+
+    &_top {
+        padding: 75px 0 55px 0;
+
+    }
+
+    &_bottom {
+        padding-bottom: 35px;
+
+        span {
+            display: block;
+            font-family: $font-inter;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 21.9px;
+            text-align: center;
+            color: #000;
+        }
+    }
+}
+// footer
