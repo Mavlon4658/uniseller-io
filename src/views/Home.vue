@@ -68,6 +68,47 @@ export default {
         </swiper>
     </section>
     <!-- Partners end -->
+
+    <!-- contact -->
+    <section class="contact">
+        <div class="main_container">
+            <h3 class="contact_title">
+                Задайте<br> свой вопрос
+            </h3>
+            <form action="#">
+                <div class="form_left">
+                    <div class="form_left_top">
+                        <div class="form_left_top_block">
+                            <label for="name">
+                                Ваше имя*
+                            </label>
+                            <input type="text">
+                        </div>
+                        <div class="form_left_top_block">
+                            <label for="phone">
+                                Номер телефона*
+                            </label>
+                            <div class="input_block">
+                                <div class="flag">
+                                    <img src="@/assets/images/flag_icon.svg" alt="">
+                                    <img src="@/assets/images/down_icon.svg" alt="">
+                                </div>
+                                <input type="number" placeholder="+7 (000) 000-00-00">
+                            </div>
+                        </div>
+                    </div>
+                    <p>* - поля, обязательные для заполнения</p>
+                    <p>
+                        Отправляя данные, вы соглашаетесь с <a href="#">политикой конфиденциальности</a>
+                    </p>
+                </div>
+                <button class="btn_yellow">
+                    Заказать звонок
+                </button>
+            </form>
+        </div>
+    </section>
+    <!-- contact -->
 </template>
 
 <style>

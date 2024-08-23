@@ -271,10 +271,48 @@ body {
 }
 // Home end
 
+// contact
+.contact {
+
+    &_title {
+        font-family: $font-itc-gothic-demi;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 42.79px;
+        text-align: left;
+        color: #EF6C1E;
+    }
+
+    .main_container {
+        padding: 60px 0;
+        background: #282828;
+        border-radius: 0 15px 15px 0;
+        position: relative;
+        display: flex;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 100vw;
+            border-radius: 0 15px 15px 0;
+            background: #282828;
+            z-index: -1;
+        }
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+    }
+}
+// contact
+
 // footer
 .footer {
-    border: 1px solid red;
-
+    
     &_logo {
         display: flex;
         flex-direction: column;
